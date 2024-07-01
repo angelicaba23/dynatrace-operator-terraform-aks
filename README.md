@@ -24,6 +24,8 @@ source: [Quickstart: Deploy an Azure Kubernetes Service (AKS) cluster using Terr
 ### Create a Terraform execution plan
 Create a file `varaibles.tfvars` and define the dollowing variables:
 ```
+k8s-config_path            = "~/.kube/config"
+
 dynatrace-operator-version = "1.2.0" # Available versions: https://gallery.ecr.aws/dynatrace/dynatrace-operator
 dynatrace-deployment-mode  = "applicationMonitoring" #Use one of the following: "applicationMonitoring", "classicFullStack", "cloudNativeFullStack", "hostMonitoring"
 dynatrace-api-url          = "https://ENVIRONMENTID.live.dynatrace.com/api" #REQUIRED For instructions, see https://www.dynatrace.com/support/help/reference/dynatrace-concepts/environment-id/.
